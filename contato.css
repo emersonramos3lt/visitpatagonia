@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+
+header {
+    background-color: #2E86AB;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 20px;
+}
+
+h1 > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+
+nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+
+.texto {
+    max-width: 80%;
+    margin: auto;
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 100px;
+}
+
+.contato-box {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato-info {
+    border: 2px solid #2E86AB;
+    margin-right: 10%;
+    width: 40%;
+    max-width: 400px;
+    height: 300px;
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.contato-info form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    box-sizing: border-box;
+    background-color: #fff;
+    color: black;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    border-radius: 14px;
+    outline: none;
+}
+
+.localizacao {
+    margin-top: -40px;
+    flex: 1;
+    padding: 20px;
+    color: black;
+    order: -1;
+}
+
+.localizacao p {
+    font-size: 22px;
+}
+
+.localizacao .fa-phone, .fa-map, .fa-envelope {
+    font-size: 45px;
+    color: black;
+    
+    border-radius: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    text-align: center;
+    width: 40%;
+    height: 50px;
+    margin-top: 20px;
+    background-color: rgb(128, 60, 60);
+    color: #fff;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover {
+    transition: 1.2s;
+    background-color: rgb(61, 145, 61);
+}
+
+
+
+@media (max-width: 750px) {
+    .texto p {
+        font-size: 20px;
+    }
+
+   .contato-box {
+        flex-direction: column;
+   }
+
+   .localizacao {
+    width: 100%;
+    margin-right: 0;
+   }
+
+   .contato-info {
+    width: 70%;
+       height: auto;
+       padding: 10px;
+   }
+
+   .input-field {
+        width: 100%;
+        margin-bottom: 10px;
+   }
+
+   .background {
+    background-size: cover;
+   }
+}
